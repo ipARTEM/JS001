@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var sum=+prompt("Введите сумму вклада: ");
+	var percent=+prompt("Введите процент для начисления: ");
+
+	percent=percent/100;
+
+	var result="Изменения размера вклада по годам:\n";
+
+	for (var i = 1; i <= 5; i++)
+	{
+		sum=sum+(sum*percent);
+		result+=i+"год: " + sum.toFixed(2)+"рублей\n";
+	}
+	alert(result);
+</script>

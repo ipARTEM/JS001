@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	//var numbers=[22, 44, 66, 88, 99];
+
+	var numbers=[];
+	//numbers.push(42);	//добавляет число
+	//numbers.push(18);
+	//numbers.push(64);
+	//numbers.pop();		//уберает число
+
+	function getRandomNumber(max)
+	{
+		return Math.round(Math.random()*max);
+	}
+
+	function generateRandomNumberArray(length)
+	{
+		var arr=[];
+
+		for (var i = 0; i < length; i++)
+		{
+			var randomNumber=getRandomNumber(100);
+			arr.push(randomNumber);	
+		}
+		return arr;
+	}
+
+	var numbers=generateRandomNumberArray(5);
+
+	alert("Запомните числа и их порядок: "+numbers);
+
+	var userAnswer=+prompt("Каким было первое число?");
+	compareAnswer(userAnswer, numbers[0]);
+
+	userAnswer=+prompt("А последнее?");
+	compareAnswer(userAnswer, numbers[numbers.length-1]);
+
+	var n=getRandomNumber(numbers.length-1);
+	userAnswer=+prompt("А как насчёт числа под номером "+(n+1)+ " ?");
+	compareAnswer(userAnswer, numbers[n]);
+	
+
+
+
+	
+</script>

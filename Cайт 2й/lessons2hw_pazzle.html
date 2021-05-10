@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт Артёма Химина</title>
+	<link rel="stylesheet" type="stalesheet" href="style.css">
+	<script type="text/javascript">
+
+		var score=0;
+
+
+		function checkAnswer(inputId,answers)
+		{
+			var userAnswer=document.getElementById(inputId).value; 
+			userAnswer=userAnswer.toLowerCase();
+			for (var i = 0; i < answers.length; i++)
+			{
+				if (userAnswer==answers[i])
+				{
+					score++;
+					break;
+				}
+				
+			}
+		}
+
+		function checkAnswers() 
+		{
+			checkAnswer("userAnswer1",["сон","сноведение"]);
+			checkAnswer("userAnswer2",["морской","укус акулы"]);
+			checkAnswer("userAnswer3",["шахматный","мертвый"]);
+
+
+			/*var userAnswer=document.getElementById("userAnswer1").value;
+			var score =0;
+			userAnswer=userAnswer.toLowerCase();
+			if(userAnswer=="сон" ||userAnswer=="сноведение")
+			{
+				score++;
+			}
+
+
+			var userAnswer=document.getElementById("userAnswer2").value;
+			userAnswer=userAnswer.toLowerCase();
+			if(userAnswer=="морской" ||userAnswer=="укус акулы")
+			{
+				score++;
+			}
+
+			var userAnswer=document.getElementById("userAnswer3").value;
+			userAnswer=userAnswer.toLowerCase();
+			if(userAnswer=="шахматный" ||userAnswer=="мкртвый")
+			{
+				score++;
+			}
+			*/
+			alert("Вы отгадали "+score+" загадок");
+		}
+	</script>
+</head>
+<body >
+
+	<div class="header">
+		<a href="index.php">Главная</a>
+		<a href="pazzle.html">Загадка</a>
+		<a href="#">Угадайка</a>
+	</div>
+	
+<div class="contentWrap">
+	<div class="content">
+		<div class="center">
+			<h1>Игра в загадки</h1>
+			<div class="box">
+				<p>Что можно увидить с закрытыми глазами?</p>
+				<input type="text" id="userAnswer1">
+
+				<p>Какой болезнью никто не болеет на суши?</p>
+				<input type="text" id="userAnswer2">
+
+				<p>Какой конь не ест овса?</p>
+				<input type="text" id="userAnswer3">
+				<br>
+				<a href="#" onclick="checkAnswers();">Ответить</a>
+
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+
+<div class="footer">
+Copyright &copy;  Artem Khimin
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var answer=parseInt(Math.random()*100);
+
+	var playerNumber=1;
+
+	
+	while(true)
+	{
+		var userAnswer=prompt("Угадай число от 0 до 100.\n Ходит игрок " +
+			playerNumber + ".\n Для выхода нажмите q");
+	
+		if(userAnswer=="q")
+			break;
+
+		userAnswer=parseInt(userAnswer);
+
+	
+		if(userAnswer==answer)
+		{
+			alert("Поздравляем, Победил игрок "+playerNumber);
+			break;
+			//continue; - сразу переход к следующей итерации
+		}
+
+		else if(userAnswer>answer)
+		{
+			alert("Вы ввели число больше");
+		}
+
+		else if(userAnswer<answer)
+		{
+			alert("Вы ввели число меньше");
+		}
+		
+		if(playerNumber==1)
+			playerNumber=2;
+		else
+			playerNumber=1;
+	}
+	
+	document.write("Правельный ответ: "+ answer);
+</script>

@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	score=0;
+	var userAnswer=prompt("Что можно увидить с закрытыми глазами?");
+	userAnswer=userAnswer.toLowerCase();
+
+	if(userAnswer=="сон"|| userAnswer=="своведение")
+	{
+		alert("Это правельный ответ");
+		score++;
+	}
+	else
+		alert("Вы не угадали");
+
+	userAnswer=prompt("Какой болезнью некто не болеет на суше?");
+	userAnswer=userAnswer.toLowerCase();
+
+	if(userAnswer=="морской")
+	{
+		alert("Это правельный ответ");
+		score++;
+	}
+	else
+		alert("Вы не угадали");
+
+	userAnswer=prompt("Кукой конь не ест овса?");
+	userAnswer=userAnswer.toLowerCase();
+
+	if(userAnswer=="шахматный")
+	{
+		alert("Это правельный ответ");
+		score++;
+	}
+	else
+		alert("Вы не угадали");
+
+	userAnswer=prompt("Зачем нужен нос?");
+	userAnswer=userAnswer.toLowerCase();
+
+	if(userAnswer=="дышать")
+	{
+		alert("Это правельный ответ");
+		score++;
+	}
+	else
+		alert("Вы не угадали");
+
+	if(score==1)
+	alert("Суммарно Вы угадали "+score+" загадку");
+	else
+		alert("Суммарно Вы угадали "+score+" загадки");
+
+</script>

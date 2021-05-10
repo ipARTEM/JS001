@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	//var english=["food", "bike", "apple", "do", "men"];
+	//var russian=["еда","велосипед", "яблоко", "делать", "мужчина"];
+
+	function askForWords(words)
+	{
+		while(words.length!=0)
+		{
+			var i=parseInt(Math.random()*words.length);
+			var userTranslate=prompt("Как переводится слови: "+ words[i][0]);
+
+			if (userTranslate==words[i][1])
+			{
+				alert("Правильно! ");
+				words.splice(i, 1);
+			}
+			else
+			{
+				alert("Правельный ответ: "+ words[i][1]);
+			}
+		}
+	}
+
+	var easyWords = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["apple", "яблоко"],
+		["do", "делать"],
+		["men", "мужчина"],
+	];
+
+	//var wordsTest=[ ["moto","bmw"]];
+	//prompt(wordsTest[[0][0]]);
+
+	/*while(words.length!=0)
+	{
+		var i=parseInt(Math.random()*words.length);
+		var userTranslate=prompt("Как переводится слови: "+ words[i][0]);
+
+		if (userTranslate==words[i][1])
+		{
+			alert("Правильно! ");
+			words.splice(i, 1);
+		}
+		else
+		{
+			alert("Правельный ответ: "+ words[i][1]);
+		}
+	}
+	*/
+
+	askForWords(easyWords);
+
+	var hardWords=[
+		["chainsaw", "бензопила"],
+		["squirrel", "белка"],
+		["castle", "замок"],
+		["homeland", "родина"],
+		["sewerage", "канализация"],
+		["botton", "дно"]
+
+	];
+
+	alert("Поздравляю, Вы угадали все лёгчие слова!!!");
+
+	askForWords(hardWords);
+
+	/*while(hardWords.length!=0)
+	{
+		var i=parseInt(Math.random()*hardWords.length);
+		userTranslate=prompt("Как переводится слови: "+ hardWords[i][0]);
+
+		if (userTranslate==hardWords[i][1])
+		{
+			alert("Правильно! ");
+			hardWords.splice(i, 1);
+		}
+		else
+		{
+			alert("Правельный ответ: "+ hardWords[i][1]);
+		}
+	}
+	*/
+	
+
+	//alert(words[0][1]);
+
+</script>
